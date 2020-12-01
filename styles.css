@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+
+};
+
+.wins { 
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+};
+
+

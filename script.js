@@ -71,8 +71,8 @@ const playResults = (choice, computer) => {
 const renderGame = () => {
   let htmlString = `<div class='list'>`;
   state.players[0].choice.forEach((choice, i=0) => {
-    htmlString += `<div class="choice>"
-                    <div onclick='playRps("${choice}")'>${imageSources[i]}</div>
+    htmlString += `<div class="choice">
+                      <div onclick='playRps("${choice}")'>${imageSources[i]}</div>
                     </div>`;  
                     i++;               
   });
@@ -84,10 +84,14 @@ const renderGame = () => {
 const render = () => {
   console.log("Render called");
   let root = document.getElementById("root");
-  let htmlString = `<h1 class="header">Rock Paper Scissors</h1>`
-  htmlString += `<p>Your Wins: ${state.players[0].wins}</p>`
-  htmlString += `<p>Computer Wins: ${state.players[1].wins}</p>`
-  htmlString += `<p>Click a selection below to play!</p>`;
+  let htmlString = `<h1 class="header">Rock Paper Scissors</h1></br>`
+  htmlString += `
+                  <div class="info">
+                    <p>Your Wins: ${state.players[0].wins}</p>
+                    <p>Computer Wins: ${state.players[1].wins}</p>
+                    <p>Click a selection below to play!</p>
+                  </div>
+                `;
   htmlString += renderGame();
  
   
